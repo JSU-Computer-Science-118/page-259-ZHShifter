@@ -14,41 +14,25 @@ int main()
 	int c;
 	
 
-	cout << "Enter 'a' of equation: ";
-	cin >> a;
-	cout << endl;
-
-	cout << "Enter 'b' of equation: ";
-	cin >> b;
-	cout << endl;
-
-	cout << "Enter 'c' of equation: ";
-	cin >> c;
+	cin >> a >> b >> c;
 	cout << endl;
 	
 	double root1 = ((( - b + pow(((b ^ 2) - (4 * a * c)), 0.5)) / (2 * a)));
 	double root2 = ((( - b - pow(((b ^ 2) - (4 * a * c)), 0.5)) / (2 * a)));
 
-	if ((((b ^ 2) - (4 * a * c))^0.5) == 0)
+	if ((pow(((b ^ 2) - (4 * a * c)), 0.5)) == 0)
 	{
-		cout << "Equation has a single root" << endl;
+		cout << "The single root is " << root1 << endl;
 	}
 	else if ((pow(((b ^ 2) - (4 * a * c)), 0.5)) > 0)
 	{
-		cout << "Equaiton has two real roots" << endl;
+		cout << "Two real roots" << endl;
+		cout << "- First root " << root2 << endl;
+		cout << "- Second root " << root1 << endl;
 	}
 	else
 	{
-		cout << "Equation has two complex roots so they can not be displayed" << endl;
-	}
-
-	if ((pow(((b ^ 2) - (4 * a * c)), 0.5)) >= 0)
-	{
-		cout << "The roots are (" << root1 << ", 0), " << "(" << root2 << ", 0)" << endl;
-	}
-	else if (root1 == root2)
-	{
-		cout << "The root is (" << root1 << ", 0)" << endl;
+		cout << "Complex roots" << endl;
 	}
 
 	return 0;
