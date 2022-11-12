@@ -13,7 +13,7 @@ int main()
 	int b;
 	int c;
 	
-
+	cout << "Input: ";
 	cin >> a >> b >> c;
 	cout << endl;
 	
@@ -22,17 +22,18 @@ int main()
 
 	if ((pow(((b ^ 2) - (4 * a * c)), 0.5)) == 0)
 	{
-		cout << "The single root is " << root1 << endl;
+		cout << "Output: The single root is " << root1 << endl;
 	}
 	else if ((pow(((b ^ 2) - (4 * a * c)), 0.5)) > 0)
 	{
+		cout << "Ouput:" << endl;
 		cout << "Two real roots" << endl;
 		cout << "- First root " << root2 << endl;
 		cout << "- Second root " << root1 << endl;
 	}
 	else
 	{
-		cout << "Complex roots" << endl;
+		cout << "Output: Complex roots" << endl;
 	}
 
 	return 0;
